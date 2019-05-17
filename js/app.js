@@ -44,19 +44,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var addSum = a + b + c;
-    var prodSum = a * b * c;
-    var textSum = a + ' and ' + b + ' and ' + c + ' sum to ' + addSum + '.';
-    var textProd = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodSum + '.';
-    return [addSum, prodSum, textSum, textProd];
+    
+    var sumTwo = sum(a, b)[0];
+    var sumThree = sum(sumTwo, c)[0];
 
-    //var sumTwo = sum(a, b);
-    //var sumThree = sum(sumTwo, c);
-    //var prodTwo = multiply(a, b);
-    //var prodThree = multiply(prodTwo, c);
-    //var textSum = a + ' and ' + b + ' and ' + c + ' sum to ' + sumThree + '.';
-    //var textProd = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodThree + '.';
-    //return [sumThree, prodThree, textSum, textProd];
+    var prodTwo = multiply(a, b)[0];
+    var prodThree = multiply(prodTwo, c)[0];
+
+    var textSum = a + ' and ' + b + ' and ' + c + ' sum to ' + sumThree + '.';
+    var textProd = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prodThree + '.';
+    return [sumThree, prodThree, textSum, textProd];
     
     //function addSum() {
     //    var addArray = [sum(a,b), c];
